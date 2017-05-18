@@ -28,6 +28,17 @@ module.exports = function(grunt) {
 			src  : '<%= concat.dist.dest %>',
 			dest : 'src/dist/core.min.js'
 		  }
+		},				
+		cssmin: {
+		  options: {
+			mergeIntoShorthands: false,
+			roundingPrecision: -1
+		  },
+		  target: {
+			files: {
+			  'src/dist/core.css': ['node_modules/materialize-css/dist/css/materialize.min.css']
+			}
+		  }
 		},
 		watch: {
 			scripts: {
@@ -43,7 +54,8 @@ module.exports = function(grunt) {
   // carrega plugins
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   
-  grunt.registerTask('build', ['concat', 'uglify']);
+  grunt.registerTask('build', ['concat', 'uglify', 'cssmin']);
 };
