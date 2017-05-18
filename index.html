@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="fenix">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Fenix</title>
+    <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+  
+  <div ng-include="'./menu.html'"></div>
+  <div ng-view></div>  
+
+  <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>			
+  <script type="text/javascript" src="./node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="./node_modules/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="./src/fenix.js"></script>
+  <script type="text/javascript" src="./src/controllers/oficina-cadastro.controller.js"></script>
+  <script type="text/javascript" src="./src/controllers/endereco-cadastro.controller.js"></script>
+     
+</body>
+</html>

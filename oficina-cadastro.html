@@ -1,0 +1,43 @@
+<div ng-controller="OficinaController as oCtrl" class="container">
+
+	<div class="row">
+	    <form class="col s12" ng-submit="oCtrl.save(oCtrl.oficina)">
+	      <div class="row">
+	        <div class="input-field col s8">
+	          <input placeholder="Nome" required="required" id="nome" type="text" class="validate" ng-model="oCtrl.oficina.nome">
+	          <!-- <label for="nome">Nome</label>  -->
+	        </div>
+	        <div class="input-field col s2">
+				<button class="btn waves-effect waves-light green dark-4" type="submit" name="action">Save
+				    <!-- <i class="material-icons right">send</i> -->
+				</button>	        	
+	        </div>
+	      </div>
+	    </form>
+	  </div>
+	  
+	  <div class="row">
+		 <table class="bordered striped highlight responsive-table">
+		        <thead> 
+		          <tr>
+		          	  <th>ID</th>
+		              <th>Nome</th>
+		              <th></th>
+		          </tr>
+		        </thead>		
+		        <tbody>
+		          <tr ng-repeat="o in oCtrl.oficinas">
+		            <td>{{ o.id }}</td>
+		            <td>{{ o.nome }}</td>
+		            <td>
+		            	<a href ng-click="oCtrl.edit(o)">Edit</a> &nbsp;
+		            	<a href ng-click="oCtrl.del(o)">Delete</a>
+		            	<a href="#/oficina/{{o.id}}">Endere&ccedil;o</a>
+		            </td>
+		          </tr>
+		        </tbody>
+	      </table>	  
+	  
+	  </div>
+	  
+</div>	  

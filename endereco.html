@@ -1,0 +1,49 @@
+<div ng-controller="EnderecoCadastroController as eCtrl" class="container">
+
+	<div class="row">
+	
+		<h5 ng-bind="'Oficina: ' + eCtrl.oficina.nome"></h5>
+		
+        <div class="input-field col s12">
+          <input placeholder="Pesquisa Endere&ccedil;o..." required="required" id="pesquisa" type="text" class="validate" ng-model="eCtrl.pesquisa">
+        </div>		
+ 	
+	    <form class="col s12" ng-submit="eCtrl.save(eCtrl.endereco)">
+	      <div class="row">
+	        <div class="input-field col s10">
+	          <input placeholder="Logradouro" required="required" id="logradouro" type="text" class="validate" ng-model="eCtrl.endereco.logradouro">
+	        </div>
+	        <div class="input-field col s2">
+	          <input placeholder="numero" required="required" id="numero" type="text" class="validate" ng-model="eCtrl.endereco.numero">
+	        </div>
+	        <div class="input-field col s4">
+	          <input placeholder="bairro" required="required" id="bairro" type="text" class="validate" ng-model="eCtrl.endereco.bairro">
+	        </div>	        
+	        <div class="input-field col s4">
+	          <input placeholder="cidade" required="required" id="cidade" type="text" class="validate" ng-model="eCtrl.endereco.cidade">
+	        </div>
+	        <div class="input-field col s4">
+	          <input placeholder="estado" required="required" id="estado" type="text" class="validate" ng-model="eCtrl.endereco.estado">
+	        </div>	  
+	        <div class="input-field col s4">
+	          <input placeholder="pais" required="required" id="pais" type="text" class="validate" ng-model="eCtrl.endereco.pais">
+	        </div>	       
+	        <div class="input-field col s4">
+	          <input placeholder="latitude" required="required" id="latitude" type="text" class="validate" ng-model="eCtrl.endereco.latitude">
+	        </div>	   	               	        	        
+	        <div class="input-field col s4">
+	          <input placeholder="longitude" required="required" id="longitude" type="text" class="validate" ng-model="eCtrl.endereco.longitude">
+	        </div>	   	               	        	        
+	        <div class="input-field col s12">
+				<button class="btn waves-effect waves-light" type="submit" name="action">Save
+				    <!-- <i class="material-icons right">send</i> -->
+				</button>
+				<a class="btn waves-effect waves-light" name="action" href="#/oficina/cadastro">Voltar
+				</a>	        	
+					        	
+	        </div>
+	      </div>
+	    </form>
+	  </div>
+	  
+</div>	  
